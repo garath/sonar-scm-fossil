@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.stuco.sonar</groupId>
+  <artifactId>scm-fossil</artifactId>
+  <version>0.1.0-SNAPSHOT</version>
+
+  <name>SonarQube :: Plugins :: SCM :: Fossil</name>
+  <packaging>sonar-plugin</packaging>
+  <description>Fossil SCM Provider</description>
+  <url>https://github.com/garath/sonar-scm-fossil/</url>
+  <inceptionYear>2018</inceptionYear>
+  <licenses>
+    <license>
+      <name>GNU LGPL 3</name>
+      <url>http://www.gnu.org/licenses/lgpl.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <scm>
+    <connection>scm:git:git@github.com:garath/sonar-scm-fossil.git</connection>
+    <developerConnection>scm:git:git@github.com:garath/sonar-scm-fossil.git</developerConnection>
+    <url>https://github.com/garath/sonar-scm-fossil/</url>
+    <tag>HEAD</tag>
+  </scm>
+
+  <issueManagement>
+    <system>GitHub Issues</system>
+    <url>https://github.com/garath/sonar-scm-fossil/issues/</url>
+  </issueManagement>
+
+  <ciManagement>
+    <system>Travis</system>
+    <url>https://travis-ci.org/garath/sonar-scm-fossil/</url>
+  </ciManagement>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.sonarsource.sonarqube</groupId>
+      <artifactId>sonar-plugin-api</artifactId>
+      <version>7.2</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-clean-plugin</artifactId>
+        <version>3.0.0</version>
+      </plugin>
+      <plugin>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>3.0.2</version>
+      </plugin>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.7.0</version>
+      </plugin>
+      <plugin>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.20.1</version>
+      </plugin>
+      <plugin>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.0.2</version>
+      </plugin>
+      <plugin>
+        <artifactId>maven-install-plugin</artifactId>
+        <version>2.5.2</version>
+      </plugin>
+      <plugin>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <version>2.8.2</version>
+      </plugin>
+      <plugin>
+        <groupId>org.sonarsource.sonar-packaging-maven-plugin</groupId>
+        <artifactId>sonar-packaging-maven-plugin</artifactId>
+        <version>1.18.0.372</version>
+        <extensions>true</extensions>
+        <configuration>
+          <pluginName>Fossil</pluginName>
+          <pluginClass>com.stuco.sonar.fossil.FossilPlugin</pluginClass>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
