@@ -1,7 +1,11 @@
 language: java
 
+addons:
+    sonarcloud:
+        organization: "garath-github"
+
 jdk:
     - oraclejdk8
 
 script:
-    - mvn --batch-mode test verify package
+    - mvn --batch-mode test verify package sonar:sonar
