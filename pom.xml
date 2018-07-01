@@ -7,7 +7,7 @@
 
   <groupId>com.stuco.sonar</groupId>
   <artifactId>sonar-scm-fossil-plugin</artifactId>
-  <version>0.1.0-SNAPSHOT</version>
+  <version>1.0.0</version>
 
   <name>SonarQube :: Plugins :: SCM :: Fossil</name>
   <packaging>sonar-plugin</packaging>
