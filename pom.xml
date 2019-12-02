@@ -35,8 +35,8 @@
   </issueManagement>
 
   <ciManagement>
-    <system>Travis</system>
-    <url>https://travis-ci.org/garath/sonar-scm-fossil/</url>
+    <system>GitHub Actions</system>
+    <url>https://github.com/garath/sonar-scm-fossil/actions</url>
   </ciManagement>
 
   <properties>
